@@ -50,7 +50,7 @@ const getUserDataFromToken = (req) => {
 const app = express();
 
 const bcryptSalt = bcrypt.genSaltSync(10);
-const jwtSecret = "jdhcvdhcmdklfjevkd";
+const jwtSecret = process.env.JWT_SECRET;
 const bucket = "sonam-booking-app";
 
 app.use(express.json());
